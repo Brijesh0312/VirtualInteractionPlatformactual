@@ -1,4 +1,4 @@
-# StudentPortal
+# VirtualInteractionPlatform
 An interaction platform for teachers and students built upon Django framework for web. Here, after logging in students can ask doubts and teachers can answer them. The database is managed in the Django framework itself.
 
 # Scope
