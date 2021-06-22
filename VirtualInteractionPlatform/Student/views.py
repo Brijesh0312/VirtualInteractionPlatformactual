@@ -93,13 +93,17 @@ def contacts(request):
 
 
 def show(request):
+    global name
     if(currStudentLogged):
             
         d=Questionanswers.objects.all()
+        e=Students.objects.all()
         finallst=[]
+        rnumber=currStudentLogged.rollnumber
         for i in d:
             if not (i.Answers==''):
-                finallst.append(i)
+                if(i.rollnumber==rnumber):
+                    finallst.append(i)
         params={'answers':finallst}
         return render(request,'Student/ShowAnswerspage.html',params)
     else:
